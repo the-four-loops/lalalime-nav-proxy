@@ -42,10 +42,10 @@ app.use(morgan('dev'));
 //   proxy({ target: 'http://localhost:3000/' })
 // );
 // app.use('/', apiProxy); 
-app.use('/navbar', navbar);
-app.use('/main-product', mainProduct);
-app.use('/similar-products', similarProducts);
-app.use('/reviews', reviews);
+app.use('/api/search', navbar);
+  // app.use('/main-product', mainProduct);
+  // app.use('/similar-products', similarProducts);
+  // app.use('/reviews', reviews);
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.listen(port, () => console.log(`app is listening on port ${port}`));
